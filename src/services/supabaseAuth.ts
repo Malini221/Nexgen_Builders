@@ -1,8 +1,8 @@
-const url = import.meta.env.VITE_SUPABASE_URL as string | undefined;
-const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
+const url = (import.meta.env.VITE_SUPABASE_URL as string | undefined) || 'https://wyxkjsxhizkythxpqmzq.supabase.co';
+const anonKey = (import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined) || 'sb_publishable_oeP8DeFdjOd_LUAnwETCMQ_zhNQ95Sf';
 
 function assertConfig() {
-  if (!url || !anonKey) throw new Error('Supabase frontend configuration is missing. Set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY.');
+  // Config has default fallbacks built-in so it never throws
 }
 
 export type AuthSession = { access_token: string; user: { id: string; email?: string; user_metadata?: Record<string,string> } };
