@@ -1,0 +1,16 @@
+id,complaint_1,complaint_2,label
+1,Water supply is unavailable on the third floor of Block B hostel.,There is no water on Block B third floor.,DUPLICATE
+2,The classroom projector is not working.,The projector in our classroom has stopped working.,DUPLICATE
+3,The college bus arrives twenty minutes late every morning.,Our morning college bus is regularly delayed.,DUPLICATE
+4,Garbage bins near the canteen are overflowing.,Waste bins around the canteen are full and not being collected.,DUPLICATE
+5,The library air conditioner has stopped working.,The library AC is not functioning.,DUPLICATE
+6,There are sparks from an exposed electrical wire.,An exposed wire near the staircase is producing sparks.,DUPLICATE
+7,The hostel bathroom tap is leaking.,The classroom projector is broken.,UNRELATED
+8,The college bus is delayed.,The library air conditioner is not working.,UNRELATED
+9,The canteen food is cold.,The examination timetable has overlapping exams.,UNRELATED
+10,The hostel lift is broken.,The campus road has potholes.,RELATED
+11,The hostel bathroom drainage is blocked.,There is wastewater collecting near the hostel washroom.,RELATED
+12,The campus pathway has poor lighting.,The security light near the hostel is not working.,RELATED
+13,The canteen has overflowing garbage.,The campus waste collection has been missed.,RELATED
+14,The bus is overcrowded in the morning.,The evening bus has too few seats.,RELATED
+15,The classroom fan is broken.,The seminar hall microphone is not working.,UNRELATED

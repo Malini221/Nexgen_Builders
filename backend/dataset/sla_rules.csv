@@ -1,0 +1,5 @@
+id,severity,priority,sla,description
+1,CRITICAL,CRITICAL,Immediate,Immediate escalation
+2,HIGH,HIGH,24 hours,High-priority resolution
+3,MEDIUM,MEDIUM,48 hours,Standard priority resolution
+4,LOW,LOW,72 hours,Routine resolution

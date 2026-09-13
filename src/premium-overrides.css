@@ -1,0 +1,137 @@
+/* NexCampus premium UI overrides
+   Keeps the existing green/white visual language while fixing the overly compact scale.
+*/
+
+:root {
+  --content-max-width: 1760px;
+  --ui-radius: 16px;
+}
+
+html { font-size: 16px; }
+body { min-width: 320px; }
+
+/* Readable type scale: no microscopic metadata or labels. */
+.text-xs { font-size: 0.8125rem !important; line-height: 1.45 !important; }
+.text-sm { font-size: 0.9375rem !important; line-height: 1.5 !important; }
+[class~="text-[10px]"] { font-size: 0.75rem !important; line-height: 1.4 !important; }
+[class~="text-[11px]"] { font-size: 0.8125rem !important; line-height: 1.45 !important; }
+[class~="text-[12px]"] { font-size: 0.875rem !important; line-height: 1.45 !important; }
+[class~="text-[13px]"] { font-size: 0.875rem !important; }
+[class~="text-[14px]"] { font-size: 0.9375rem !important; }
+
+main > div {
+  width: min(100%, var(--content-max-width));
+  max-width: var(--content-max-width) !important;
+  padding-inline: clamp(1rem, 2.2vw, 2.75rem);
+}
+
+main > div > * { min-width: 0; }
+main .gap-2 { gap: 0.625rem; }
+main .gap-3 { gap: 0.875rem; }
+main .gap-4 { gap: 1.125rem; }
+main .gap-5 { gap: 1.5rem; }
+
+main .bg-surface-card {
+  border-radius: var(--ui-radius);
+  box-shadow: 0 1px 2px rgba(18,35,28,.03), 0 10px 30px rgba(18,35,28,.045);
+}
+
+/* Dashboard category cards are the large cards; issue-type buttons stay medium. */
+main button.group.h-36 {
+  min-height: 168px;
+  padding: 1.1rem;
+  border-radius: 16px;
+}
+
+main button.group.h-36 .w-9.h-9 {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+main button.group.h-36 .material-symbols-outlined { font-size: 1.25rem !important; }
+main button.group.h-36 .font-title { font-size: 1rem !important; line-height: 1.3 !important; }
+main button.group.h-36 p { font-size: .8125rem !important; line-height: 1.4 !important; }
+
+/* Issue-type cards: medium height with slightly larger readable labels. */
+main button.group:not(.h-36) {
+  min-height: 0;
+  height: auto;
+  padding: .85rem 1rem;
+  border-radius: 12px;
+}
+main button.group:not(.h-36) .font-body-md {
+  font-size: .9375rem !important;
+  line-height: 1.4 !important;
+}
+
+/* Remove bracket/glyph treatment from the Add Photo / File control. */
+main label[for="reportAttachment"] .font-label-md.text-xs.font-semibold.text-primary {
+  font-size: 0 !important;
+}
+main label[for="reportAttachment"] .font-label-md.text-xs.font-semibold.text-primary::after {
+  content: "Add Photo / File";
+  font-size: .8125rem;
+  line-height: 1.4;
+}
+main label[for="reportAttachment"] .material-symbols-outlined {
+  display: none !important;
+}
+
+/* Responsive category grid: larger cards on wide screens, single-column clarity on phones. */
+main .grid.grid-cols-2.sm\:grid-cols-3.md\:grid-cols-4.lg\:grid-cols-6 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.scene-orbit, .float-card { display: none !important; }
+
+.risk-eyebrow, .risk-action { font-size: .75rem !important; }
+.risk-title { font-size: 1.05rem !important; }
+.risk-reasons span { font-size: .75rem !important; padding: .45rem .7rem !important; }
+
+.font-display { line-height: 1.08; }
+.font-headline-lg { line-height: 1.12; }
+.font-headline-sm { line-height: 1.25; }
+
+main .bg-surface-card,
+main button.group,
+main [role="button"] {
+  transition: transform .22s cubic-bezier(.2,.8,.2,1), box-shadow .22s ease, border-color .22s ease;
+}
+
+main button.group.h-36:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(18,35,28,.07), 0 18px 42px rgba(18,35,28,.055);
+}
+
+@media (max-width: 1199px) {
+  main .grid.grid-cols-2.sm\:grid-cols-3.md\:grid-cols-4.lg\:grid-cols-6 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  main > div { padding-inline: 1rem !important; }
+  main .grid.grid-cols-2.sm\:grid-cols-3.md\:grid-cols-4.lg\:grid-cols-6 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .75rem;
+  }
+  main button.group.h-36 { min-height: 154px; padding: .9rem; }
+  main .bg-surface-card { border-radius: 14px; }
+}
+
+@media (max-width: 430px) {
+  main .grid.grid-cols-2.sm\:grid-cols-3.md\:grid-cols-4.lg\:grid-cols-6 {
+    grid-template-columns: 1fr;
+  }
+  main button.group.h-36 { min-height: 132px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

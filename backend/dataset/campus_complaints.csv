@@ -1,0 +1,196 @@
+id,text,category,severity,impact
+1,The water supply has stopped on the third floor of Block B hostel.,hostel,HIGH,MULTIPLE
+2,The hostel bathroom tap is leaking continuously.,hostel,LOW,INDIVIDUAL
+3,There is no hot water in the hostel bathrooms.,hostel,MEDIUM,MULTIPLE
+4,The room fan in Block A hostel is not working.,hostel,MEDIUM,INDIVIDUAL
+5,The hostel corridor lights are not working at night.,hostel,HIGH,MULTIPLE
+6,The hostel room door lock is damaged.,hostel,HIGH,INDIVIDUAL
+7,The hostel room is overcrowded with more students than assigned.,hostel,HIGH,MULTIPLE
+8,The hostel lift has stopped working.,hostel,HIGH,MULTIPLE
+9,The hostel room has poor ventilation and feels extremely hot.,hostel,MEDIUM,INDIVIDUAL
+10,There are mosquitoes entering rooms because the hostel window screen is damaged.,hostel,MEDIUM,MULTIPLE
+11,The hostel drinking water dispenser is empty.,hostel,MEDIUM,MULTIPLE
+12,The hostel laundry area washing machine is not working.,hostel,LOW,MULTIPLE
+13,The hostel study room is unavailable during scheduled hours.,hostel,LOW,MULTIPLE
+14,The hostel mattress provided is damaged.,hostel,LOW,INDIVIDUAL
+15,The hostel room ceiling has a small water leak.,hostel,MEDIUM,INDIVIDUAL
+16,The hostel common room air conditioner is not functioning.,hostel,MEDIUM,MULTIPLE
+17,The hostel staircase handrail is loose.,hostel,HIGH,MULTIPLE
+18,The hostel room has no electricity since morning.,hostel,HIGH,MULTIPLE
+19,The hostel maintenance request has not been addressed for several days.,hostel,MEDIUM,INDIVIDUAL
+20,The hostel bathroom drainage is blocked.,hostel,MEDIUM,MULTIPLE
+21,I cannot access the student counselling service.,student-welfare,MEDIUM,INDIVIDUAL
+22,The counselling appointment system is unavailable.,student-welfare,MEDIUM,MULTIPLE
+23,There is no support available for a student facing an urgent personal issue.,student-welfare,HIGH,INDIVIDUAL
+24,The student welfare office is closed during its published hours.,student-welfare,MEDIUM,MULTIPLE
+25,I have been waiting several days for a welfare request response.,student-welfare,MEDIUM,INDIVIDUAL
+26,The student grievance support desk is not responding.,student-welfare,MEDIUM,MULTIPLE
+27,A scholarship support request has not received a response.,student-welfare,MEDIUM,INDIVIDUAL
+28,The campus does not provide the promised accessibility assistance.,student-welfare,HIGH,INDIVIDUAL
+29,The student support helpline is unreachable.,student-welfare,HIGH,MULTIPLE
+30,The welfare office staff are unavailable during working hours.,student-welfare,LOW,MULTIPLE
+31,The student ID replacement support is delayed.,student-welfare,LOW,INDIVIDUAL
+32,I need assistance with a student welfare issue but cannot reach the office.,student-welfare,MEDIUM,INDIVIDUAL
+33,The campus support centre has no clear process for handling student complaints.,student-welfare,MEDIUM,MULTIPLE
+34,A welfare request was marked completed without being resolved.,student-welfare,HIGH,INDIVIDUAL
+35,The accessibility ramp is blocked and students cannot use it.,student-welfare,HIGH,MULTIPLE
+36,The college bus is delayed by twenty minutes every morning.,transport,MEDIUM,MULTIPLE
+37,Bus route 7 is overcrowded during the morning trip.,transport,HIGH,MULTIPLE
+38,The college bus did not arrive at the scheduled stop.,transport,HIGH,MULTIPLE
+39,The bus tracking information is showing the wrong location.,transport,MEDIUM,MULTIPLE
+40,The transport office is not responding to route complaints.,transport,MEDIUM,MULTIPLE
+41,The bus stop shelter is damaged.,transport,LOW,MULTIPLE
+42,The bus has no working air conditioning.,transport,MEDIUM,MULTIPLE
+43,The college bus driver is repeatedly missing the scheduled departure time.,transport,MEDIUM,MULTIPLE
+44,The evening bus service is unavailable.,transport,HIGH,MULTIPLE
+45,The transport pass is not being recognized.,transport,LOW,INDIVIDUAL
+46,The bus route has been changed without informing students.,transport,HIGH,MULTIPLE
+47,The college bus broke down during the trip.,transport,HIGH,MULTIPLE
+48,There is a long queue because too few buses are available.,transport,HIGH,MULTIPLE
+49,The bus seat is broken and unsafe to use.,transport,HIGH,INDIVIDUAL
+50,The transport schedule displayed online is outdated.,transport,LOW,MULTIPLE
+51,The bus is frequently overcrowded after evening classes.,transport,HIGH,MULTIPLE
+52,The driver is driving dangerously near the campus entrance.,transport,CRITICAL,MULTIPLE
+53,The college bus has been waiting at the wrong pickup point.,transport,MEDIUM,MULTIPLE
+54,The transport office has not resolved my route change request.,transport,LOW,INDIVIDUAL
+55,The bus service stops too early for students attending evening activities.,transport,MEDIUM,MULTIPLE
+56,The classroom projector is not working.,college-campus,MEDIUM,DEPARTMENT
+57,The classroom fan is broken.,college-campus,LOW,DEPARTMENT
+58,The lecture hall lights are not functioning.,college-campus,MEDIUM,MULTIPLE
+59,The library air conditioning has stopped working.,college-campus,MEDIUM,MULTIPLE
+60,The library computer is unavailable.,college-campus,LOW,INDIVIDUAL
+61,The seminar hall microphone is not working.,college-campus,MEDIUM,MULTIPLE
+62,The campus Wi-Fi is unavailable in several academic buildings.,college-campus,HIGH,MULTIPLE
+63,The college entrance gate is damaged.,college-campus,MEDIUM,MULTIPLE
+64,The campus parking area is overcrowded.,college-campus,MEDIUM,MULTIPLE
+65,The classroom desks are damaged.,college-campus,LOW,MULTIPLE
+66,The college notice board has outdated information.,college-campus,LOW,MULTIPLE
+67,The campus drinking water station is not working.,college-campus,MEDIUM,MULTIPLE
+68,The main building lift is not functioning.,college-campus,HIGH,MULTIPLE
+69,The library access gate is not opening.,college-campus,MEDIUM,MULTIPLE
+70,The campus auditorium seats are damaged.,college-campus,LOW,MULTIPLE
+71,The classroom air conditioner is leaking water.,college-campus,MEDIUM,DEPARTMENT
+72,The college laboratory building has a power outage.,college-campus,HIGH,MULTIPLE
+73,The campus pathway has poor lighting at night.,college-campus,HIGH,MULTIPLE
+74,The library printer is not working.,college-campus,LOW,INDIVIDUAL
+75,The campus announcement display is not updating.,college-campus,LOW,MULTIPLE
+76,The food served at lunch was spoiled.,food-canteen,HIGH,MULTIPLE
+77,The canteen food is being served cold.,food-canteen,MEDIUM,MULTIPLE
+78,The drinking water at the canteen is unavailable.,food-canteen,HIGH,MULTIPLE
+79,The canteen tables are not cleaned regularly.,food-canteen,MEDIUM,MULTIPLE
+80,There are insects near the food serving area.,food-canteen,HIGH,MULTIPLE
+81,The canteen queue is extremely long during lunch.,food-canteen,MEDIUM,MULTIPLE
+82,The canteen billing system is not working.,food-canteen,MEDIUM,MULTIPLE
+83,The food portions have become much smaller.,food-canteen,LOW,MULTIPLE
+84,The canteen is closed during the published lunch period.,food-canteen,MEDIUM,MULTIPLE
+85,There is a bad smell coming from the kitchen area.,food-canteen,HIGH,MULTIPLE
+86,The refrigerator used for food storage is not working.,food-canteen,HIGH,MULTIPLE
+87,The canteen floor is slippery because of spilled liquid.,food-canteen,HIGH,MULTIPLE
+88,The menu displayed does not match the food being served.,food-canteen,LOW,MULTIPLE
+89,The food serving counter is unhygienic.,food-canteen,HIGH,MULTIPLE
+90,The canteen does not have enough seating for students.,food-canteen,LOW,MULTIPLE
+91,A student found a foreign object in the food.,food-canteen,HIGH,INDIVIDUAL
+92,The kitchen waste is not being disposed of properly.,food-canteen,MEDIUM,MULTIPLE
+93,The canteen handwashing station has no water.,food-canteen,MEDIUM,MULTIPLE
+94,The food delivery to the hostel is consistently late.,food-canteen,MEDIUM,MULTIPLE
+95,The canteen staff are not following basic food hygiene practices.,food-canteen,HIGH,MULTIPLE
+96,There are sparks coming from an exposed electrical wire.,safety-security,CRITICAL,MULTIPLE
+97,I smell gas near the campus kitchen.,safety-security,CRITICAL,MULTIPLE
+98,A fire alarm is sounding in the laboratory building.,safety-security,CRITICAL,CAMPUS
+99,The staircase emergency light is not working.,safety-security,HIGH,MULTIPLE
+100,A security camera near the main gate is not working.,safety-security,HIGH,MULTIPLE
+101,The campus emergency exit is blocked.,safety-security,CRITICAL,MULTIPLE
+102,There is smoke coming from an electrical panel.,safety-security,CRITICAL,MULTIPLE
+103,A ceiling section appears to be collapsing.,safety-security,CRITICAL,MULTIPLE
+104,The campus security gate is left unattended at night.,safety-security,HIGH,MULTIPLE
+105,A student reported a dangerous electrical shock from a socket.,safety-security,CRITICAL,INDIVIDUAL
+106,The fire extinguisher is missing from the laboratory.,safety-security,HIGH,MULTIPLE
+107,The emergency contact number is not reachable.,safety-security,HIGH,MULTIPLE
+108,The staircase floor is damaged and creates a serious fall risk.,safety-security,HIGH,MULTIPLE
+109,The security light near the hostel is not working.,safety-security,HIGH,MULTIPLE
+110,An unknown person entered a restricted laboratory area.,safety-security,HIGH,MULTIPLE
+111,The campus boundary gate is damaged.,safety-security,MEDIUM,MULTIPLE
+112,A chemical container is leaking in the laboratory.,safety-security,CRITICAL,MULTIPLE
+113,The emergency alarm in the hostel is not functioning.,safety-security,CRITICAL,MULTIPLE
+114,A broken electrical socket is exposed in the classroom.,safety-security,CRITICAL,MULTIPLE
+115,The security staff are not present at a required checkpoint.,safety-security,HIGH,MULTIPLE
+116,Garbage bins are overflowing near the canteen.,cleanliness-sanitation,MEDIUM,MULTIPLE
+117,The hostel bathroom is not cleaned regularly.,cleanliness-sanitation,MEDIUM,MULTIPLE
+118,There is a bad smell from the campus drainage.,cleanliness-sanitation,MEDIUM,MULTIPLE
+119,Waste has been left near the classroom building for several days.,cleanliness-sanitation,MEDIUM,MULTIPLE
+120,The washroom floor is dirty and wet.,cleanliness-sanitation,MEDIUM,MULTIPLE
+121,The campus garbage collection has been missed.,cleanliness-sanitation,MEDIUM,MULTIPLE
+122,There are mosquitoes around stagnant water near the hostel.,cleanliness-sanitation,HIGH,MULTIPLE
+123,The handwashing area is unhygienic.,cleanliness-sanitation,MEDIUM,MULTIPLE
+124,The public washroom has no soap.,cleanliness-sanitation,LOW,MULTIPLE
+125,The sanitary waste bins are full.,cleanliness-sanitation,HIGH,MULTIPLE
+126,The drinking water area is dirty.,cleanliness-sanitation,MEDIUM,MULTIPLE
+127,The campus cleaning staff have not cleaned the corridor.,cleanliness-sanitation,LOW,MULTIPLE
+128,There is litter around the sports ground.,cleanliness-sanitation,LOW,MULTIPLE
+129,The hostel waste disposal area is overflowing.,cleanliness-sanitation,HIGH,MULTIPLE
+130,The bathroom drainage is blocked and wastewater is collecting.,cleanliness-sanitation,HIGH,MULTIPLE
+131,The classroom dustbins have not been emptied.,cleanliness-sanitation,LOW,MULTIPLE
+132,There is sewage leakage near the hostel.,cleanliness-sanitation,CRITICAL,MULTIPLE
+133,The campus restroom has a persistent foul smell.,cleanliness-sanitation,MEDIUM,MULTIPLE
+134,The garbage collection point is attracting stray animals.,cleanliness-sanitation,HIGH,MULTIPLE
+135,The sanitation complaint has remained unresolved for a week.,cleanliness-sanitation,MEDIUM,MULTIPLE
+136,A water pipe is leaking near the administration building.,infrastructure-maintenance,MEDIUM,MULTIPLE
+137,The main campus water supply is interrupted.,infrastructure-maintenance,HIGH,CAMPUS
+138,A ceiling tile has fallen in the classroom.,infrastructure-maintenance,HIGH,MULTIPLE
+139,The corridor floor tiles are broken.,infrastructure-maintenance,MEDIUM,MULTIPLE
+140,The campus road has large potholes.,infrastructure-maintenance,HIGH,MULTIPLE
+141,The electrical power is unstable in the academic block.,infrastructure-maintenance,HIGH,MULTIPLE
+142,The classroom door is damaged.,infrastructure-maintenance,LOW,DEPARTMENT
+143,The campus drainage cover is broken.,infrastructure-maintenance,HIGH,MULTIPLE
+144,The water tap in the laboratory is damaged.,infrastructure-maintenance,MEDIUM,DEPARTMENT
+145,The building roof has water leakage during rain.,infrastructure-maintenance,HIGH,MULTIPLE
+146,The campus pathway has broken pavement.,infrastructure-maintenance,MEDIUM,MULTIPLE
+147,The classroom window is broken.,infrastructure-maintenance,MEDIUM,DEPARTMENT
+148,The main water tank requires maintenance.,infrastructure-maintenance,HIGH,MULTIPLE
+149,The campus streetlight is not working.,infrastructure-maintenance,HIGH,MULTIPLE
+150,A wall has visible cracks near the staircase.,infrastructure-maintenance,HIGH,MULTIPLE
+151,The air conditioning unit in the seminar hall is leaking.,infrastructure-maintenance,MEDIUM,MULTIPLE
+152,The campus elevator is making unusual noises.,infrastructure-maintenance,HIGH,MULTIPLE
+153,The hostel plumbing system has repeated leaks.,infrastructure-maintenance,HIGH,MULTIPLE
+154,A drain cover is missing near the walkway.,infrastructure-maintenance,HIGH,MULTIPLE
+155,The maintenance request for a broken door has been pending for a week.,infrastructure-maintenance,LOW,INDIVIDUAL
+156,The examination timetable contains two exams at the same time.,academic,HIGH,MULTIPLE
+157,The online assignment submission portal is not working.,academic,HIGH,MULTIPLE
+158,The lecturer's course material is not available online.,academic,MEDIUM,MULTIPLE
+159,The internal marks displayed are incorrect.,academic,MEDIUM,INDIVIDUAL
+160,The examination hall allocation is incorrect.,academic,HIGH,MULTIPLE
+161,The course registration page is unavailable.,academic,HIGH,MULTIPLE
+162,The attendance record is showing incorrect information.,academic,MEDIUM,INDIVIDUAL
+163,The semester timetable has an overlapping class.,academic,MEDIUM,MULTIPLE
+164,The online learning portal is unavailable.,academic,HIGH,MULTIPLE
+165,The assignment deadline was changed without notification.,academic,MEDIUM,MULTIPLE
+166,The laboratory schedule conflicts with another class.,academic,MEDIUM,MULTIPLE
+167,The examination results have not been published on time.,academic,HIGH,MULTIPLE
+168,The academic office has not responded to a course issue.,academic,MEDIUM,INDIVIDUAL
+169,The course registration shows the wrong subject.,academic,MEDIUM,INDIVIDUAL
+170,The classroom allocation for our class is missing.,academic,MEDIUM,MULTIPLE
+171,The examination question paper was not available at the scheduled time.,academic,CRITICAL,MULTIPLE
+172,The college academic portal is showing an error during registration.,academic,MEDIUM,MULTIPLE
+173,A student cannot access required course materials.,academic,MEDIUM,INDIVIDUAL
+174,The project evaluation schedule has not been announced.,academic,LOW,MULTIPLE
+175,The academic timetable was changed without informing students.,academic,MEDIUM,MULTIPLE
+176,There is a report of prohibited substance use near the hostel.,substance-concern,HIGH,MULTIPLE
+177,A student reported suspected substance use in a restricted area.,substance-concern,HIGH,MULTIPLE
+178,There is a strong suspected drug-related activity near the parking area.,substance-concern,HIGH,MULTIPLE
+179,A prohibited substance was reportedly found in a common area.,substance-concern,HIGH,MULTIPLE
+180,Students reported suspected alcohol use in a campus facility.,substance-concern,HIGH,MULTIPLE
+181,There is a concern about substance-related activity near the hostel entrance.,substance-concern,HIGH,MULTIPLE
+182,A student wants to report suspected substance use confidentially.,substance-concern,MEDIUM,INDIVIDUAL
+183,There is suspected smoking in a restricted campus area.,substance-concern,MEDIUM,MULTIPLE
+184,A prohibited substance is reportedly being distributed near the campus.,substance-concern,CRITICAL,MULTIPLE
+185,Security received a report about suspected substance activity.,substance-concern,HIGH,MULTIPLE
+186,I lost my college ID card and need help reporting it.,other,LOW,INDIVIDUAL
+187,The campus notice board needs an update.,other,LOW,MULTIPLE
+188,I cannot find the correct office for my request.,other,LOW,INDIVIDUAL
+189,The student portal is showing an unexpected error.,other,MEDIUM,MULTIPLE
+190,I need help with an issue that does not fit the listed categories.,other,LOW,INDIVIDUAL
+191,The college website is displaying outdated information.,other,LOW,MULTIPLE
+192,The campus phone directory contains incorrect numbers.,other,LOW,MULTIPLE
+193,A general administrative request has not received a response.,other,MEDIUM,INDIVIDUAL
+194,The campus lost and found service is not responding.,other,LOW,INDIVIDUAL
+195,The information displayed on a campus sign is incorrect.,other,LOW,MULTIPLE

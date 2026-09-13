@@ -1,0 +1,17 @@
+id,text,label,hazard_type
+1,Exposed electrical wire is producing sparks near the staircase.,CRITICAL,electrical hazard
+2,There is smoke coming from the electrical panel.,CRITICAL,fire/electrical hazard
+3,I smell gas near the campus kitchen.,CRITICAL,gas leak
+4,The emergency exit is blocked by stored materials.,CRITICAL,blocked emergency exit
+5,A ceiling section is collapsing in the corridor.,CRITICAL,structural hazard
+6,A student received an electrical shock from an exposed socket.,CRITICAL,electrical shock
+7,A chemical container is leaking inside the laboratory.,CRITICAL,chemical hazard
+8,The fire extinguisher is missing from the laboratory.,HIGH,fire safety
+9,The staircase emergency light is not working.,HIGH,emergency lighting
+10,The security camera near the main gate is not working.,HIGH,security issue
+11,The hostel room fan is making noise.,NON_CRITICAL,maintenance
+12,The classroom projector is not working.,NON_CRITICAL,equipment failure
+13,The canteen food is cold.,NON_CRITICAL,food quality
+14,The hostel bathroom tap is leaking.,NON_CRITICAL,plumbing
+15,The campus notice board has outdated information.,NON_CRITICAL,information
+16,The library printer is unavailable.,NON_CRITICAL,equipment failure

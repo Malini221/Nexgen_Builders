@@ -1,0 +1,21 @@
+id,text,expected_category,expected_severity,expected_impact
+1,The water dispenser on the second floor is empty.,hostel,MEDIUM,MULTIPLE
+2,The main gate security camera has stopped recording.,safety-security,HIGH,MULTIPLE
+3,The college bus has not arrived at the scheduled pickup point.,transport,HIGH,MULTIPLE
+4,Several students cannot access the online course portal.,academic,HIGH,MULTIPLE
+5,The canteen refrigerator is not cooling food properly.,food-canteen,HIGH,MULTIPLE
+6,Wastewater is leaking beside the hostel building.,cleanliness-sanitation,HIGH,MULTIPLE
+7,The campus elevator suddenly stopped between floors.,infrastructure-maintenance,CRITICAL,MULTIPLE
+8,The counselling appointment page is unavailable.,student-welfare,MEDIUM,MULTIPLE
+9,The library printer is not functioning.,college-campus,LOW,INDIVIDUAL
+10,The examination timetable has two subjects scheduled together.,academic,HIGH,MULTIPLE
+11,There is smoke coming from a classroom electrical socket.,safety-security,CRITICAL,MULTIPLE
+12,The college website shows an old academic calendar.,other,LOW,MULTIPLE
+13,The campus road near the entrance has several large potholes.,infrastructure-maintenance,HIGH,MULTIPLE
+14,The hostel common room AC has stopped working.,hostel,MEDIUM,MULTIPLE
+15,Students report suspected prohibited substance use near the hostel.,substance-concern,HIGH,MULTIPLE
+16,The accessibility ramp is blocked.,student-welfare,HIGH,MULTIPLE
+17,The canteen handwashing station has no running water.,food-canteen,MEDIUM,MULTIPLE
+18,The evening transport service ends before scheduled activities finish.,transport,MEDIUM,MULTIPLE
+19,The classroom desks have damaged surfaces.,college-campus,LOW,MULTIPLE
+20,The sanitation complaint has remained unresolved for a week.,cleanliness-sanitation,MEDIUM,MULTIPLE

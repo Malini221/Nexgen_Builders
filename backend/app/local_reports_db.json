@@ -1,0 +1,237 @@
+[
+  {
+    "id": "c-615243",
+    "ticket_number": 3243,
+    "student_id": "00000000-0000-0000-0000-000000000001",
+    "category_id": "cat-hostel-001",
+    "title": "Hostel: Water Supply",
+    "description": "No internet connection on Block B 3rd floor. The Wi-Fi access point indicator is red and internet is down for all rooms.",
+    "location_text": "IN ECE BLOCK",
+    "status": "Closed",
+    "submitted_at": "2026-09-13T08:50:04.996882+00:00",
+    "categories": {
+      "name": "Hostel",
+      "key": "hostel"
+    },
+    "profiles": {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "full_name": "Malini S.",
+      "student_id": "#8842",
+      "email": "student@nexcampus.edu",
+      "role": "student",
+      "department": "CS Dept",
+      "program": "B.Tech CS"
+    },
+    "ai_analysis": [
+      {
+        "priority": "HIGH",
+        "risk_score": 58.0,
+        "recommended_department": "Hostel Administration",
+        "recommended_sla": "48 hours",
+        "category_key": "hostel",
+        "severity": "MEDIUM"
+      }
+    ]
+  },
+  {
+    "id": "c-423697",
+    "ticket_number": 2022,
+    "student_id": "00000000-0000-0000-0000-000000000001",
+    "category_id": "cat-hostel-001",
+    "title": "Hostel: Water Supply",
+    "description": "No internet connection on Block B 3rd floor. The Wi-Fi access point indicator is red and internet is down for all rooms.",
+    "location_text": "IN ECE BLOCK",
+    "status": "Submitted",
+    "submitted_at": "2026-09-13T08:49:41.790364+00:00",
+    "categories": {
+      "name": "Hostel",
+      "key": "hostel"
+    },
+    "profiles": {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "full_name": "Malini S.",
+      "student_id": "#8842",
+      "email": "student@nexcampus.edu",
+      "role": "student",
+      "department": "CS Dept",
+      "program": "B.Tech CS"
+    },
+    "ai_analysis": [
+      {
+        "priority": "HIGH",
+        "risk_score": 58.0,
+        "recommended_department": "Hostel Administration",
+        "recommended_sla": "48 hours",
+        "category_key": "hostel",
+        "severity": "MEDIUM"
+      }
+    ]
+  },
+  {
+    "id": "c-979217",
+    "ticket_number": 7616,
+    "student_id": "00000000-0000-0000-0000-000000000001",
+    "category_id": "cat-hostel-001",
+    "title": "Hostel: Wi-Fi / Internet",
+    "description": "The Wi-Fi router on the 3rd floor corridor of Block B is dead. Red light blinking and no student can connect to the campus network.",
+    "location_text": "Hostel Block B 3rd Floor",
+    "status": "Submitted",
+    "submitted_at": "2026-09-13T08:49:04.010416+00:00",
+    "categories": {
+      "name": "Hostel",
+      "key": "hostel"
+    },
+    "profiles": {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "full_name": "Malini S.",
+      "student_id": "#8842",
+      "email": "student@nexcampus.edu",
+      "role": "student",
+      "department": "CS Dept",
+      "program": "B.Tech CS"
+    },
+    "ai_analysis": [
+      {
+        "priority": "HIGH",
+        "risk_score": 58.0,
+        "recommended_department": "Hostel Administration",
+        "recommended_sla": "48 hours",
+        "category_key": "hostel",
+        "severity": "MEDIUM"
+      }
+    ]
+  },
+  {
+    "id": "c-574749",
+    "ticket_number": 6599,
+    "student_id": "00000000-0000-0000-0000-000000000001",
+    "category_id": "cat-hostel-001",
+    "title": "Hostel: Electricity",
+    "description": "Heavy sparking and burning smell coming from the main electrical distribution box outside Room 304. Exposed wiring is visible and hot to touch.",
+    "location_text": "Block C Room 304",
+    "status": "Submitted",
+    "submitted_at": "2026-09-13T08:48:22.767344+00:00",
+    "categories": {
+      "name": "Hostel",
+      "key": "hostel"
+    },
+    "profiles": {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "full_name": "Malini S.",
+      "student_id": "#8842",
+      "email": "student@nexcampus.edu",
+      "role": "student",
+      "department": "CS Dept",
+      "program": "B.Tech CS"
+    },
+    "ai_analysis": [
+      {
+        "priority": "Medium",
+        "recommended_department": "Central Maintenance & Operations",
+        "recommended_sla": "24 hours"
+      }
+    ]
+  },
+  {
+    "id": "c-214932",
+    "ticket_number": 5048,
+    "student_id": "00000000-0000-0000-0000-000000000001",
+    "category_id": "cat-infra-009",
+    "title": "Infrastructure & Maintenance: Ceiling / Wall Seepage",
+    "description": "The Ceiling is started to breaking",
+    "location_text": "3rd floor CSE block",
+    "status": "Submitted",
+    "submitted_at": "2026-09-13T08:43:01.408702+00:00",
+    "categories": {
+      "name": "Infrastructure",
+      "key": "infrastructure-maintenance"
+    },
+    "profiles": {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "full_name": "Malini S.",
+      "student_id": "#8842",
+      "email": "student@nexcampus.edu",
+      "role": "student",
+      "department": "CS Dept",
+      "program": "B.Tech CS"
+    },
+    "ai_analysis": [
+      {
+        "priority": "HIGH",
+        "risk_score": 58.0,
+        "recommended_department": "Campus Facilities",
+        "recommended_sla": "48 hours",
+        "category_key": "college-campus",
+        "severity": "MEDIUM"
+      }
+    ]
+  },
+  {
+    "id": "c-250704",
+    "ticket_number": 8296,
+    "student_id": "00000000-0000-0000-0000-000000000001",
+    "category_id": "cat-hostel-001",
+    "title": "Test Hostel Wi-Fi Intermittent Disconnection",
+    "description": "Wi-Fi in Block B Room 204 keeps disconnecting every 10 minutes.",
+    "location_text": "Hostel Block B Room 204",
+    "status": "Submitted",
+    "submitted_at": "2026-09-13T08:41:42.962289+00:00",
+    "categories": {
+      "name": "Hostel",
+      "key": "hostel"
+    },
+    "profiles": {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "full_name": "Malini S.",
+      "student_id": "#8842",
+      "email": "student@nexcampus.edu",
+      "role": "student",
+      "department": "CS Dept",
+      "program": "B.Tech CS"
+    },
+    "ai_analysis": [
+      {
+        "priority": "HIGH",
+        "risk_score": 58.0,
+        "recommended_department": "Hostel Administration",
+        "recommended_sla": "48 hours",
+        "category_key": "hostel",
+        "severity": "MEDIUM"
+      }
+    ]
+  },
+  {
+    "id": "c-150176",
+    "ticket_number": 7618,
+    "student_id": "00000000-0000-0000-0000-000000000001",
+    "category_id": "cat-hostel-001",
+    "title": "Test Hostel Wi-Fi Intermittent Disconnection",
+    "description": "Wi-Fi in Block B Room 204 keeps disconnecting every 10 minutes.",
+    "location_text": "Hostel Block B Room 204",
+    "status": "Submitted",
+    "submitted_at": "2026-09-13T08:41:22.069515+00:00",
+    "categories": {
+      "name": "Hostel",
+      "key": "hostel"
+    },
+    "profiles": {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "full_name": "Malini S.",
+      "student_id": "#8842",
+      "email": "student@nexcampus.edu",
+      "role": "student",
+      "department": "CS Dept",
+      "program": "B.Tech CS"
+    },
+    "ai_analysis": [
+      {
+        "priority": "HIGH",
+        "risk_score": 58.0,
+        "recommended_department": "Hostel Administration",
+        "recommended_sla": "48 hours",
+        "category_key": "hostel",
+        "severity": "MEDIUM"
+      }
+    ]
+  }
+]
