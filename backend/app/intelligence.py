@@ -14,27 +14,56 @@ SAFETY_TERMS = {
     "structural collapse", "ceiling collapse", "life-threatening danger",
 }
 
+CATEGORY_KEYWORDS: dict[str, list[str]] = {
+    "hostel": ["hostel", "room", "dorm", "bathroom", "washroom", "mit", "warden", "mess"],
+    "food-canteen": ["food", "canteen", "mess", "meal", "cafeteria"],
+    "transport": ["bus", "transport", "shuttle", "pickup", "drop"],
+    "academic": ["class", "lecture", "lab", "exam", "portal", "faculty", "syllabus", "library"],
+    "college-campus": ["campus", "building", "gate", "ground", "parking", "corridor", "staircase"],
+    "safety-security": ["security", "safety", "cctv", "camera", "guard", "theft", "lighting"],
+    "cleanliness-sanitation": ["garbage", "waste", "clean", "dustbin", "sanitation", "overflow", "hygiene", "stink", "rodent"],
+    "infrastructure-maintenance": ["ac ", "air conditioner", "lift", "elevator", "paint", "plumbing", "leak", "electrical", "power", "fan", "projector", "wi-fi", "wifi", "internet", "network"],
+    "student-welfare": ["harassment", "ragging", "bullying", "counsel", "welfare", "mental", "stress"],
+    "substance-concern": ["smoking", "alcohol", "substance", "drug"],
+}
+
+SEVERITY_CRITICAL = ["fire", "smoke", "gas leak", "gas leakage", "sparking", "electrical shock",
+                     "short circuit", "collapse", "life-threatening", "emergency", "critical"]
+SEVERITY_HIGH = ["burning smell", "blood", "injury", "accident", "theft", "broken", "not working",
+                 "blocked", "urgent", "security", "high voltage", "exposed wire", "leak"]
+
 SEVERITY_ORDER = {"LOW": 0, "MEDIUM": 1, "HIGH": 2, "CRITICAL": 3}
 IMPACT_WEIGHTS = {"INDIVIDUAL": 8, "DEPARTMENT": 18, "MULTIPLE": 28, "CAMPUS": 38}
 SEVERITY_WEIGHTS = {"LOW": 10, "MEDIUM": 30, "HIGH": 55, "CRITICAL": 80}
+
+IMPACT_MULTIPLE_KEYWORDS = ["student", "students", "classroom", "block", "hostel", "floor",
+                            "wing", "campus", "many", "every", "all", "multiple", "batch"]
+IMPACT_CAMPUS_KEYWORDS = ["campus", "entire", "whole", "main gate", "college", "university"]
 
 
 def _clean(text: str) -> str:
     return re.sub(r"\s+", " ", (text or "").strip()).lower()
 
 
+def _models_available() -> bool:
+    """True when all fine-tuned classifier model directories are committed."""
+    return all((MODELS_DIR / f"{task}-model" / "config.json").exists() for task in ("category", "severity", "impact"))
+
+
 @lru_cache(maxsize=1)
-def _classifier_bundle():
-    """Load all fine-tuned DistilBERT classifiers once per process."""
+def _classifier_bundle() -> dict | None:
+    """Load all fine-tuned DistilBERT classifiers once per process.
+
+    Returns None when the trained models are not present so callers can fall
+    back to rule-based classification instead of crashing.
+    """
+    if not _models_available():
+        return None
     from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
     bundle = {}
     for task in ("category", "severity", "impact"):
         path = MODELS_DIR / f"{task}-model"
-        if not (path / "config.json").exists():
-            raise RuntimeError(
-                f"Trained {task} model is missing at {path}. Run `python train_classifier.py` first."
-            )
         tokenizer = AutoTokenizer.from_pretrained(str(path), local_files_only=True)
         model = AutoModelForSequenceClassification.from_pretrained(str(path), local_files_only=True)
         model.eval()
@@ -48,23 +77,68 @@ def get_embedder():
     return SentenceTransformer(get_settings().embedding_model)
 
 
+@lru_cache(maxsize=1)
+def _cached_embeddings(text: str) -> list[float]:
+    return get_embedder().encode(text, normalize_embeddings=True).tolist()
+
+
 def make_embedding(text: str) -> list[float]:
-    vector = get_embedder().encode(text, normalize_embeddings=True)
-    values = vector.tolist()
+    values = _cached_embeddings(text)
     if len(values) != 384:
         raise RuntimeError(f"Embedding model returned {len(values)} dimensions; expected 384.")
     return values
 
 
 def _predict(task: str, text: str) -> tuple[str, float]:
+    bundle = _classifier_bundle()
+    if bundle is None:
+        return _rule_based(task, text)
     import torch
-    tokenizer, model = _classifier_bundle()[task]
+    tokenizer, model = bundle[task]
     encoded = tokenizer(text, return_tensors="pt", truncation=True, max_length=256)
     with torch.inference_mode():
         probs = torch.softmax(model(**encoded).logits, dim=-1)[0]
     idx = int(torch.argmax(probs).item())
     label = model.config.id2label.get(idx, str(idx))
     return label, float(probs[idx].item())
+
+
+def _rule_based(task: str, text: str) -> tuple[str, float]:
+    """Deterministic keyword classifier used when trained models are absent.
+
+    Uses the same label vocabulary as the trained classifiers so the rest of
+    the pipeline (SLA mapping, department routing, risk scoring) keeps working.
+    """
+    norm = _clean(text)
+
+    if task == "category":
+        if any(k in norm for k in SAFETY_TERMS):
+            return "safety-security", 0.90
+        best_key, best_hits = "other", 0
+        for key, keywords in CATEGORY_KEYWORDS.items():
+            hits = sum(1 for kw in keywords if kw in norm)
+            if hits > best_hits:
+                best_key, best_hits = key, hits
+        confidence = round(min(0.95, 0.55 + best_hits * 0.15), 2)
+        return best_key, confidence
+
+    if task == "severity":
+        if any(k in norm for k in SEVERITY_CRITICAL):
+            return "CRITICAL", 0.95
+        if any(k in norm for k in SEVERITY_HIGH):
+            return "HIGH", 0.80
+        if any(k in norm for k in ["some", "a few", "occasionally", "intermittent", "smelly"]):
+            return "MEDIUM", 0.70
+        return "MEDIUM", 0.60
+
+    if task == "impact":
+        if any(k in norm for k in IMPACT_CAMPUS_KEYWORDS):
+            return "CAMPUS", 0.85
+        if any(k in norm for k in IMPACT_MULTIPLE_KEYWORDS):
+            return "MULTIPLE", 0.75
+        return "INDIVIDUAL", 0.70
+
+    return "other", 0.5
 
 
 def classify_category(text: str) -> tuple[str, float]:

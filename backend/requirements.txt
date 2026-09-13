@@ -3,10 +3,13 @@ uvicorn[standard]==0.35.0
 pydantic==2.11.7
 pydantic-settings==2.10.1
 supabase==2.18.1
-torch
-transformers
-datasets
+pandas==2.2.3
+numpy==2.2.6
+tqdm
+# CPU-only PyTorch keeps the Docker image ~2GB smaller and fits the 512MB free tier.
+# Pin the CPU wheel index instead of the default CUDA build.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.5.1+cpu
+transformers==4.49.0
 sentence-transformers==5.1.0
-scikit-learn
-pandas
-numpy==2.3.2
+scikit-learn==1.6.1

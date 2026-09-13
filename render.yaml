@@ -4,7 +4,9 @@ services:
     runtime: docker
     plan: free
     region: oregon
+    rootDir: backend
     dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
     envVars:
       - key: SUPABASE_URL
         value: https://wyxkjsxhizkythxpqmzq.supabase.co
@@ -12,3 +14,5 @@ services:
         value: sb_publishable_oeP8DeFdjOd_LUAnwETCMQ_zhNQ95Sf
       - key: CORS_ORIGINS
         value: "*"
+      - key: PORT
+        value: 8000

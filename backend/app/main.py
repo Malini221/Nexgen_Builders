@@ -66,20 +66,26 @@ def root() -> dict[str, str]:
         "message": "NexCampus Intelligence API is running",
         "health": "/health",
         "docs": "/docs",
-        "frontend": "http://localhost:3000"
+        "frontend": "https://nexcampus.vercel.app",
     }
 
 
 @app.get("/health")
-def health() -> dict[str, str]:
-    return {"status": "ok", "service": "nexcampus-fastapi", "ai": "local-distilbert+minilm"}
+def health() -> dict[str, str | bool]:
+    from .intelligence import _models_available
+    return {
+        "status": "ok",
+        "service": "nexcampus-fastapi",
+        "ai": "trained-distilbert+minilm" if _models_available() else "rule-based-fallback",
+        "classifier_models_ready": _models_available(),
+    }
 
 
 @app.get("/api/ai/status")
 def ai_status(_: dict = Depends(require_user)) -> dict[str, Any]:
-    from .intelligence import MODELS_DIR
+    from .intelligence import _models_available
     return {
-        "classifier_models_ready": all((MODELS_DIR / f"{x}-model" / "config.json").exists() for x in ("category", "severity", "impact")),
+        "classifier_models_ready": _models_available(),
         "embedding_model": settings.embedding_model,
         "embedding_dimensions": 384,
         "duplicate_threshold": settings.duplicate_threshold,
