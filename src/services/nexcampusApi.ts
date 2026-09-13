@@ -1,4 +1,5 @@
-const API_URL = (import.meta.env.VITE_BACKEND_URL as string | undefined) || 'http://localhost:8000';
+const isLocal = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+const API_URL = (import.meta.env.VITE_BACKEND_URL as string | undefined) || (isLocal ? 'http://localhost:8000' : 'https://nexcampus-api.onrender.com');
 
 async function request<T>(path: string, token: string, init?: RequestInit): Promise<T> {
   try {
@@ -11,7 +12,7 @@ async function request<T>(path: string, token: string, init?: RequestInit): Prom
     return data as T;
   } catch (err: any) {
     if (err.message && !err.message.includes('Failed to fetch')) throw err;
-    throw new Error('Unable to connect to NexCampus AI service. Please verify server status at http://localhost:8000.');
+    throw new Error(`Unable to connect to NexCampus AI service at ${API_URL}. Please verify server status.`);
   }
 }
 

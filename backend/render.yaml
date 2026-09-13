@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: nexcampus-api
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: SUPABASE_URL
+        value: https://wyxkjsxhizkythxpqmzq.supabase.co
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        value: sb_publishable_oeP8DeFdjOd_LUAnwETCMQ_zhNQ95Sf
+      - key: CORS_ORIGINS
+        value: "*"

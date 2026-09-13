@@ -60,6 +60,16 @@ def _risk_and_pattern(db, incident_id: str, severity: str, impact: str, safety: 
     return risk, priority, pattern, recurrence, _incident_context(db, incident_id)
 
 
+@app.get("/")
+def root() -> dict[str, str]:
+    return {
+        "message": "NexCampus Intelligence API is running",
+        "health": "/health",
+        "docs": "/docs",
+        "frontend": "http://localhost:3000"
+    }
+
+
 @app.get("/health")
 def health() -> dict[str, str]:
     return {"status": "ok", "service": "nexcampus-fastapi", "ai": "local-distilbert+minilm"}
