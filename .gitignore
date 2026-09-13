@@ -26,3 +26,6 @@ Thumbs.db
 .vscode/*
 !.vscode/settings.json
 .idea/
+
+# Playwright MCP artifacts (browser sessions)
+.playwright-mcp/
