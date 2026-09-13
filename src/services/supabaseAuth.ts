@@ -40,12 +40,11 @@ export async function validateToken(token: string): Promise<AuthSession['user'] 
 
 
 export async function signIn(email: string, password: string): Promise<AuthSession> {
-  if (url?.includes('dummy') || anonKey?.includes('dummy')) {
+  if (!url || !anonKey || url.includes('dummy') || anonKey.includes('dummy')) {
     const fakeToken = `demo-token-${Date.now()}`;
     localStorage.setItem('nexcampus_access_token', fakeToken);
     return { access_token: fakeToken, user: { id: '00000000-0000-0000-0000-000000000001', email } };
   }
-  assertConfig();
   try {
     const res = await fetch(`${url}/auth/v1/token?grant_type=password`, {
       method: 'POST', headers: {'Content-Type':'application/json', apikey: anonKey},
@@ -63,12 +62,11 @@ export async function signIn(email: string, password: string): Promise<AuthSessi
 }
 
 export async function signUp(email: string, password: string, metadata: Record<string,string>): Promise<AuthSession | null> {
-  if (url?.includes('dummy') || anonKey?.includes('dummy')) {
+  if (!url || !anonKey || url.includes('dummy') || anonKey.includes('dummy')) {
     const fakeToken = `demo-token-${Date.now()}`;
     localStorage.setItem('nexcampus_access_token', fakeToken);
     return { access_token: fakeToken, user: { id: '00000000-0000-0000-0000-000000000001', email, user_metadata: metadata } };
   }
-  assertConfig();
   try {
     const res = await fetch(`${url}/auth/v1/signup`, {
       method: 'POST', headers: {'Content-Type':'application/json', apikey: anonKey},
